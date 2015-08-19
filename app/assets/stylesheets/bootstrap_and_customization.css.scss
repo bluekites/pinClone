@@ -1,2 +1,30 @@
-@import "bootstrap-sprockets";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg: #5D8AA6;
+$font-family-sans-serif:                'Lato', sans-serif;
+$navbar-height:                         50px;
+$navbar-default-brand-color:            gray;
+
 @import "bootstrap";
+
+.center {
+  text-align: center;
+}
+
+.navbar-brand {
+  font-weight: bold; 
+}
+
+.jumbotron {
+  padding: 0.5em 0.6em;
+  h1 {
+    font-size: 3em; 
+    padding-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.2em;
+    .btn {
+      padding: 0.5em; 
+    }
+  }
+}
