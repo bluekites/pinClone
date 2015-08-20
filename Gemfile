@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -12,6 +12,10 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-script-source', '1.8.0'
 gem 'coffee-rails', '~> 4.0.0'
+# Devise gem for allowing for user registration
+# The ~> means that anything greater than that version but not greater than 4.0 is ok for use
+gem 'devise', '~> 3.5.2'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
