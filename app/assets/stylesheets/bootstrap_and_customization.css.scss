@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:400,700);
+@import url(//fonts.googleapis.com/css?family=Lato:400,700);  /* MAKE SURE TO NOT USE HTTP!!! */
 
 $body-bg: #5D8AA6;
 $font-family-sans-serif:                'Lato', sans-serif;
@@ -7,12 +7,16 @@ $navbar-default-brand-color:            gray;
 
 @import "bootstrap";
 
-.center {
-  text-align: center;
-}
-
 .navbar-brand {
   font-weight: bold; 
+}
+
+/*********************
+Jumbotron
+*********************/
+
+.center {
+  text-align: center;
 }
 
 .jumbotron {
@@ -27,4 +31,11 @@ $navbar-default-brand-color:            gray;
       padding: 0.5em; 
     }
   }
+}
+
+/*********************
+Sign Up Page
+*********************/
+.signUp {
+  background-color: white;
 }

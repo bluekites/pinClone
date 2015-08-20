@@ -1,5 +1,11 @@
 <div class="jumbotron center">
   <h1>Welcome to my PinClone!</h1>
-  <%= link_to "Log In", "#", class: "btn btn-default btn-md" %>
-  <%= link_to "Sign Up", "#", class: "btn btn-primary btn-md" %>
+  <% if user_signed_in? %>
+    <p>Welcome member!  You are special!</p>
+  <% else %>
+    <p>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-md" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-md" %>
+    </p>
+  <% end %>
 </div>
