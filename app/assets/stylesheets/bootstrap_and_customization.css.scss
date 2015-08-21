@@ -34,8 +34,12 @@ Jumbotron
 }
 
 /*********************
-Sign Up Page
+Forms
 *********************/
 .signUp {
   background-color: white;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-left: 0;
 }
