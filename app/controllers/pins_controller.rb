@@ -17,11 +17,7 @@ class PinsController < ApplicationController
 
   def new  #First part of create
     @pin = current_user.pins.build  #this builds pins through the user model and not pins
-    if @pin.save
-      redirect_to @pin, notice: 'Pin was successfully created.'      
-    else
-      render :new    
-    end    
+    respond_with(@pin)
   end
 
   def edit 
@@ -30,7 +26,11 @@ class PinsController < ApplicationController
   def create  #Second part of create
     @pin = current_user.pins.build(pin_params)  #this builds pins through the user model and not pins
     @pin.save
-    respond_with(@pin)
+    if @pin.save
+      redirect_to @pin, notice: 'Pin was successfully created.'      
+    else
+      render :new    
+    end    
   end
 
   def update
