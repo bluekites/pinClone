@@ -17,7 +17,11 @@ class PinsController < ApplicationController
 
   def new  #First part of create
     @pin = current_user.pins.build  #this builds pins through the user model and not pins
-    respond_with(@pin)
+    if @pin.save
+      redirect_to @pin, notice: 'Pin was successfully created.'      
+    else
+      render :new    
+    end    
   end
 
   def edit 
@@ -30,8 +34,11 @@ class PinsController < ApplicationController
   end
 
   def update
-    @pin.update(pin_params)
-    respond_with(@pin)
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: 'Pin was successfully updated.'
+    else
+      render :edit
+    end    
   end
 
   def destroy
@@ -50,6 +57,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)  #this shows what you permit users to be able to update in form
     end
 end

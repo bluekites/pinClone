@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # The ~> means that anything greater than that version but not greater than 4.0 is ok for use
 gem 'devise', '~> 3.5.2'
 
+gem 'paperclip', '~> 3.0'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
