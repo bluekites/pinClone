@@ -1,7 +1,7 @@
 <div class="jumbotron center">
-  <h1>Welcome to my PinClone!</h1>
+  <h1>Welcome to PinClone!</h1>
   <% if user_signed_in? %>
-    <p>Welcome member!  You are special!</p>
+    <p>Welcome, member!  You are special!</p>
   <% else %>
     <p>
       <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-md" %>

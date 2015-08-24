@@ -7,7 +7,7 @@ class PinsController < ApplicationController
   respond_to :html
 
   def index  #The page that lists all the pins
-    @pins = Pin.all
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
     respond_with(@pins)
   end
 
@@ -43,7 +43,7 @@ class PinsController < ApplicationController
 
   def destroy
     @pin.destroy
-    respond_with(@pin)
+    redirect_to @pin, notice: 'Pin was successfully deleted.'
   end
 
   private

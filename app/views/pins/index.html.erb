@@ -1,7 +1,9 @@
 <body class="body-form">
-  
+  <%= render 'pages/home' %>
   <% if user_signed_in? %>
-    <%= link_to 'New Pin', new_pin_path, class: "btn btn-primary" %>
+    <div class="center">
+      <%= link_to 'New Pin', new_pin_path, class: "btn btn-primary" %>
+    </div>
   <% end %>
 
   <div id="pins" class="transitions-enabled">
@@ -29,5 +31,8 @@
 
     <% end %>
   </div>
-
+  
+  <div class="center">
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
 </body>
