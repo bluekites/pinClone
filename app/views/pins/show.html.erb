@@ -16,7 +16,7 @@
         <div class="panel-body">  
           <p><strong>Description:</strong>
           <%= @pin.description %></p>
-          <p><strong><%= @pin.user.email if @pin.user %></strong></p>
+          <p><strong>Uploaded by: <%= @pin.user.name if @pin.user %></strong></p>
           <% if @pin.user == current_user %><!-- need @ sign for the pin because it is not defined here -->
           <%= link_to raw('<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit'), edit_pin_path(@pin) %> 
           <% end %>
