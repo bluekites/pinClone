@@ -79,6 +79,9 @@ Rails.application.configure do
   # Required for heroku
   config.action_mailer.default_url_options = { host: 'https://pin-carnation.herokuapp.com/' }
   
+  #Fix the issue of some bootstrap elements not working on Heroku
+  config.assets.precompile += %w( .svg .eot .woff .ttf )
+  
   # This sets paperclip to upload images to Amazon S3
   config.paperclip_defaults = {
     :storage => :s3,
