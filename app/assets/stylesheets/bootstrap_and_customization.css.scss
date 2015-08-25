@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
@@ -10,7 +12,7 @@ $font-family-sans-serif:                'Lato', sans-serif;
 $navbar-height:                         50px;
 $navbar-default-brand-color:            gray;
 
-@import "bootstrap-sprockets";  /* This will make it work on heroku */
+
 @import "bootstrap";
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"); /* Link for glyphicons!!! */
 
