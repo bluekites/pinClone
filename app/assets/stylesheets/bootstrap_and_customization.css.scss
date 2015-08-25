@@ -6,6 +6,7 @@ $font-family-sans-serif:                'Lato', sans-serif;
 $navbar-height:                         50px;
 $navbar-default-brand-color:            gray;
 
+@import "bootstrap-sprockets";  /* This will make it work on heroku */
 @import "bootstrap";
 
 .navbar-brand {
